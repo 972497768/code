@@ -1,7 +1,3 @@
-###################
-# 修改矩阵代码，
-# 改进损失函数加入loss解决样本不平衡问题，×
-################
 # pytorch
 from tensorboardX import SummaryWriter
 import torch.optim as optim
