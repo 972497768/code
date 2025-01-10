@@ -31,6 +31,7 @@ class cmaps():
         # viridis colormap with nan values set to black
         self.viridis = cm.viridis
         self.viridis.set_bad(color='k', alpha=1)
+        
 class ClassColor():
     def __init__(self):
         
@@ -41,10 +42,6 @@ class ClassColor():
             (1.0000, 1.0000, 0.0000), # yellow-1 
             (1.0000, 0.0000, 0.0000), # red-2 
             (0.0000, 0.0000, 1.0000), # dark blue-3 
-            # (0.0000, 0.0000, 0.0000, 0.0000)
-            # (1.0000, 1.0000, 1.0000), # yellow-1 
-            # (1.0000, 0.0000, 0.7490),  # pink-2 
-            # (1.0000, 1.0000, 0.0000), # white-3 
             ]
         self.rgb = colors.LinearSegmentedColormap.from_list('rgb', rgb)
         # self.ek500.set_bad(color='k', alpha=1)
