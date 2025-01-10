@@ -200,7 +200,7 @@ def resultprocess(raw, msw, path, raw_name):
     Sa_swr   = np.zeros_like(Sv_swr)*np.nan
     NASC_swr = np.zeros_like(Sv_swr)*np.nan
     
-    # 先不管海底，选取250至20米深度数据的NASC值，并以1海里为选取
+    
     for i in range(len(Sv_swr[0])):
         # if (np.isnan(sbliner[0,i])) | (sbliner[0,i]>250):
         Sa_swr  [0,i] = tf.log(tf.lin(Sv_swr[0,i])*(250-20))
@@ -209,7 +209,7 @@ def resultprocess(raw, msw, path, raw_name):
         #     Sa120swr  [0,i] = tf.log(tf.lin(Sv120swr[0,i])*(sbliner[0,i]-20))
         #     NASC120swr[0,i] = 4*np.pi*1852**2*tf.lin(Sv120swr[0,i])*(sbliner[0,i]-20)
 
-    # 获得结果
+    
     results = {'Time'     : np.array(t_r      , dtype=str)         ,
             'Longitude': np.round(lon_r    , 5)                 ,
             'Latitude' : np.round(lat_r    , 5)                 ,
@@ -407,35 +407,7 @@ def dataset_predict(args, data):
     if not os.path.exists(H5SavePath):
         os.makedirs(H5SavePath)
 
-    if data_type == '120+d':
-        idx_ch = [0, 3]
-        idepth = 1
-        in_channels = 2
-    elif data_type == '70+d':
-        idx_ch = [1, 3]
-        idepth = 1
-        in_channels = 2
-    elif data_type == '38+d':
-        idx_ch = [2, 3]
-        idepth = 1
-        in_channels = 2
-    elif data_type == '120+70+d':
-        idx_ch = [0, 1, 3]
-        idepth = 2
-        in_channels = 3
-    elif data_type == '120+38+d':
-        idx_ch = [0, 2, 3]
-        idepth = 2
-        in_channels = 3
-    elif data_type == '70+38+d':
-        idx_ch = [1, 2, 3]
-        idepth = 2
-        in_channels = 3
-    elif data_type == '120+70+38+d':
-        idx_ch = [0, 1, 2, 3]
-        idepth = 3
-        in_channels = 4
-    elif data_type == '120':
+    if data_type == '120':
         idx_ch = [0, 3]
         idepth = False
         in_channels = 1
