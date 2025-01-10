@@ -37,21 +37,7 @@ class MyDataset(Dataset):
         
         label = h5f["label"][:]
         
-        if self.data_type == '120+d':
-            image = image[[0, 3], :, :]
-        elif self.data_type == '70+d':
-            image = image[[1, 3], :, :]
-        elif self.data_type == '38+d':
-            image = image[[2, 3], :, :]
-        elif self.data_type == '120+70+d':
-            image = image[[0, 1, 3], :, :]
-        elif self.data_type == '120+38+d':
-            image = image[[0, 2, 3], :, :]
-        elif self.data_type == '70+38+d':
-            image = image[[1, 2, 3], :, :]
-        elif self.data_type == '120+70+38+d':
-            image = image[[0, 1, 2, 3], :, :]
-        elif self.data_type == '120':
+        if self.data_type == '120':
             image = image[[0], :, :]
         elif self.data_type == '70':
             image = image[[1], :, :]    
