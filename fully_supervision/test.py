@@ -570,7 +570,7 @@ def dataset_predict(args, data):
                         
 
                         # Get prediction results for the current data (cluster classification results, cluster masks)
-                        current_result[top:bottom, left:right] = y_pred[0,:,:]  # 把当前patch贴到result上
+                        current_result[top:bottom, left:right] = y_pred[0,:,:]  
                 
                 dl_time1 = time.time()
                 # ----------Calculation of losses and evaluation of indicators-------------
