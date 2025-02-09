@@ -3,18 +3,12 @@ UNet Extraction of Antarctic Krill
 
 The model is available at google drive:
 
-`markdown
-| 列1    | 列2    |
-|——|——|
-|38.pkl |     |
-
-“`markdown
-| 列1    | 列2    | 列3   |
-|——|——|—–|
-| 内容1  | 内容2  | 内容3 |
-| 内容4  | 内容5  | 内容6 |
-“`
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Input frequency | Second Header | Third Header  |
+| --------------- | ------------- | ------------- |
+| 38              | Content Cell  | Content Cell  |
+| 70              | Content Cell  | Content Cell  |
+| 120             | Content Cell  | Content Cell  |
+| 70+38           | Content Cell  | Content Cell  |
+| 120+70          | Content Cell  | Content Cell  |
+| 120+38          | Content Cell  | Content Cell  |
+| 120+70+38       | Content Cell  | Content Cell  |
